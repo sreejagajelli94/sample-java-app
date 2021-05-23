@@ -1,5 +1,5 @@
 pipeline {
-    agent label master
+    agent any
     environment {
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
