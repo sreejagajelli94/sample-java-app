@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent label master
     environment {
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
@@ -27,7 +27,8 @@ pipeline {
                 GIT_REPO='https://github.com/sreejagajelli94/sample-java-app.git'
             }
             steps {
-                git "${GIT_REPO}"
+                // 
+                checkout scm
             }
         }
         stage('Compile') {
