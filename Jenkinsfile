@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('Git CheckoutOut'){
             environment{
-                GIT_REPO='https://github.com/atinsingh/sample-java-app.git'
+                GIT_REPO='https://github.com/sreejagajelli94/sample-java-app.git'
             }
             steps {
                 git "${GIT_REPO}"
