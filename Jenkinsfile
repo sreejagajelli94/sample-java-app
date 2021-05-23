@@ -36,15 +36,20 @@ pipeline {
             }
         }
 
-         stage('Unit Test') {
+        stage('Unit Test') {
             steps {
                 sh 'mvn test'
             }
         }
 
-         stage('Package') {
+        stage('Package') {
             steps {
                 sh 'mvn package'
+            }
+        }
+        stage('Artifactory') {
+            steps {
+                sh 'mvn install'
             }
         }
     }
