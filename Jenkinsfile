@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'master' }
     environment {
         APP_HOME='/home/app'
         PRAGRA_BATCH='devs'
@@ -18,7 +18,7 @@ pipeline {
     }
     tools{
         maven  'm3'
-        jdk 'jdk11'
+        jdk 'jdk8'
     }
 
     stages {
