@@ -27,8 +27,7 @@ pipeline {
                 GIT_REPO='https://github.com/sreejagajelli94/sample-java-app.git'
             }
             steps {
-                // 
-                checkout scm
+                git "${GIT_REPO}"
             }
         }
         stage('Compile') {
